@@ -34,9 +34,9 @@ function createListElement () {
 	todo.appendChild(list);
 	}
 	input1.value="";
-	var listItems=document.querySelectorAll("li");
+	var listItems=document.querySelectorAll(".checkbox.done");
 	listArray.push(listItems);
-	taskListEmpty();
+	taskListEmpty(); // call the function once here and at the end also
 
 }
 buttonClick.addEventListener("click",createListElement);
@@ -44,6 +44,14 @@ input1.addEventListener("keypress", function(event) {
 	if(event.key==="Enter") {createListElement();}
 }
 );
-
-
+taskListEmpty(); // call this function at the end so that it counts after all actions are taken
 // end of checklist script
+
+// insert date function copied from ChatGPT and edited slightly
+const today = new Date();
+const options = { day: 'numeric' ,month: 'long'};
+const formattedDate = today.toLocaleDateString('en', options);
+document.getElementById("header").innerHTML="Tasks: "+formattedDate;
+
+
+
