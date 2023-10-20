@@ -2,6 +2,8 @@
 font-family: 'Poppins', sans-serif;
 --bg-color: rgb(228, 215, 250);
 --fg-color: rgb(76, 59, 106);
+--error:rgba(102, 94, 117, 0.806);
+--form-control-disabled: #959495;
 }
 body{
   display: flex;
@@ -15,7 +17,7 @@ h1{
   color: var(--fg-color);
 }
 
-.done {
+.checkbox.done {
   text-decoration: line-through;
   font-style: italic;
   text-decoration-thickness: .1rem;
@@ -24,6 +26,7 @@ li{
   list-style: none;
   text-transform:capitalize;
   font-size: .8rem;
+  line-height: 2rem;
   color: var(--fg-color);
 }
 .intro{
@@ -45,7 +48,7 @@ button{
   border: none .1rem;
   padding: 1rem;
   border-radius: .7rem;
-  width: 60%;
+  width: 75%;
   height: auto;
   margin-top: 1rem;
   background-image: linear-gradient(to bottom right, var(--bg-color), white);
@@ -58,4 +61,32 @@ button{
 hr{
   width: 20%;
   color: var(--fg-color);
+}
+#errormsg{
+  font-size: .8rem;
+  color: var(--error);
+  margin-left: 3rem;
+}
+/* checkbox styling starts here */
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 0.03em solid currentColor;
+  border-radius: 0.3rem;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+input[type="checkbox"]:checked{
+background-color: transparent;
+border: none;
+
+}
+
+input[type="checkbox"]:checked::before {
+  content: "✔"; /* You can replace this with any text or character for the checkmark */
+  color: var(--fg-color); /* Change the color of the checkmark */
+  font-size: 1rem;
+  vertical-align: middle;
 }
