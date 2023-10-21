@@ -1,93 +1,107 @@
 :root{
-font-family: 'Poppins', sans-serif;
---bg-color: rgb(228, 215, 250);
---fg-color: rgb(76, 59, 106);
---error:rgba(102, 94, 117, 0.806);
---form-control-disabled: #959495;
-}
-body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--fg-color);
-}
-h1{
-  font-size: 2rem;
-  color: var(--fg-color);
-}
-
-.checkbox.done {
-  text-decoration: line-through;
-  font-style: italic;
-  text-decoration-thickness: .1rem;
-}
-li{
-  list-style: none;
-  text-transform:capitalize;
-  font-size: .8rem;
-  line-height: 2rem;
-  color: var(--fg-color);
-}
-.intro{
-  max-width: 65%;
-  text-align: center;
-  font-size: .8rem;
-}
-button{
-  border-radius: .9rem;
-  margin-top: 1rem;
-  height: auto;
-  width: auto;
-  font-family: 'Poppins';
-  background-color: var(--fg-color);
+  font-family: 'Poppins', sans-serif;
+  --bg-color: rgb(228, 215, 250);
+  --fg-color: rgb(76, 59, 106);
+  --error:rgba(102, 94, 117, 0.806);
+  --form-control-disabled: #959495;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--fg-color);
+  }
+  h1{
+    font-size: 2rem;
+    color: var(--fg-color);
+  }
+  
+.done{
+    /* text-decoration: line-through; */
+    /* text-decoration-thickness: .1rem; */
+    color: var(--error);
+    font-weight: 50;
+  }
+  li{
+    list-style: none;
+    text-transform:capitalize;
+    font-size: .8rem;
+    line-height: 2rem;
+    color: var(--fg-color);
+  }
+  .intro{
+    max-width: 65%;
+    text-align: center;
+    font-size: .8rem;
+  }
+  button{
+    border-radius: .9rem;
+    margin-top: 1rem;
+    height: auto;
+    width: auto;
+    font-family: 'Poppins';
+    background-color: var(--fg-color);
+    border: none;
+    color: white;
+    padding: .5rem 1rem .5rem 1rem;
+  }
+  .tasks{
+    border: none .1rem;
+    padding: 1rem;
+    border-radius: .7rem;
+    width: 75%;
+    height: auto;
+    margin-top: 1rem;
+    background-image: linear-gradient(to bottom right, var(--bg-color), white);
+  }
+  #userinput{
+    padding: .5rem 1rem .5rem 1rem;
+    border: solid .5px;
+    border-radius: 1rem;
+  }
+  hr{
+    width: 20%;
+    color: var(--fg-color);
+  }
+  #errormsg{
+    font-size: .8rem;
+    color: var(--error);
+    margin-left: 3rem;
+  }
+  /* checkbox styling starts here */
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    width: 1.15rem;
+    height: 1.15rem;
+    border: 0.03em solid currentColor;
+    border-radius: 0.3rem;
+    vertical-align: middle;
+    /* margin-right: 1rem; */
+  }
+  input[type="checkbox"]:checked{
+  background-color: transparent;
   border: none;
-  color: white;
-  padding: .5rem 1rem .5rem 1rem;
-}
-.tasks{
-  border: none .1rem;
-  padding: 1rem;
-  border-radius: .7rem;
-  width: 75%;
-  height: auto;
-  margin-top: 1rem;
-  background-image: linear-gradient(to bottom right, var(--bg-color), white);
-}
-#userinput{
-  padding: .5rem 1rem .5rem 1rem;
-  border: solid .5px;
-  border-radius: 1rem;
-}
-hr{
-  width: 20%;
-  color: var(--fg-color);
-}
-#errormsg{
-  font-size: .8rem;
-  color: var(--error);
-  margin-left: 3rem;
-}
-/* checkbox styling starts here */
-input[type="checkbox"] {
-  appearance: none;
-  background-color: #fff;
-  width: 1.15rem;
-  height: 1.15rem;
-  border: 0.03em solid currentColor;
-  border-radius: 0.3rem;
-  vertical-align: middle;
-  margin-right: 1rem;
-}
-input[type="checkbox"]:checked{
-background-color: transparent;
-border: none;
-
-}
-
-input[type="checkbox"]:checked::before {
-  content: "✔"; /* You can replace this with any text or character for the checkmark */
-  color: var(--fg-color); /* Change the color of the checkmark */
-  font-size: 1rem;
-  vertical-align: middle;
-}
+  
+  }
+  
+  input[type="checkbox"]:checked::before {
+    content: "✔"; /* You can replace this with any text or character for the checkmark */
+    color: var(--fg-color); /* Change the color of the checkmark */
+    font-size: 1rem;
+    vertical-align: middle;
+  }
+  span{
+    color: var(--error);
+    /* margin-left: 2rem; */
+    cursor: pointer;
+    font-size: .6rem;
+    vertical-align: middle;
+  }
+  li{
+    display: grid;
+    grid-template-columns: .8fr 4fr .5fr;
+    gap: 1rem;
+    grid-auto-rows: minmax(.5rem, auto);
+  }

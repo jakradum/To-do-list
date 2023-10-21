@@ -18,10 +18,12 @@ function createListElement () {
 	const list= document.createElement("li");
 	var listCreateNode=document.createTextNode(input1.value);
 	var addCheckbox=document.createElement("input");
+	const closeButton= document.createElement("span"); // declare a new constant to create a span element, will be used later
+	const task=document.querySelectorAll("li");
 	addCheckbox.type="checkbox";
 	addCheckbox.addEventListener("change",function() {
 	if(addCheckbox.checked) {
-		list.classList.add("checkbox")
+		// list.classList.add("checkbox")
 		list.classList.add("done")
 	} else {
 		list.classList.add("new")
@@ -31,6 +33,9 @@ function createListElement () {
 	// add event listener called "change" and declare a function where, using 'classList' you can add or remove classes.
 	list.appendChild(addCheckbox);
 	list.appendChild(listCreateNode);
+	
+	closeButton.innerHTML=" ✕"; // span element being added to the html here
+	list.appendChild(closeButton);
 	todo.appendChild(list);
 	}
 	input1.value="";
@@ -39,11 +44,17 @@ function createListElement () {
 	taskListEmpty(); // call the function once here and at the end also
 
 }
+function deleteListElement() {
+	
+}
+
+
 buttonClick.addEventListener("click",createListElement);
 input1.addEventListener("keypress", function(event) {
 	if(event.key==="Enter") {createListElement();}
 }
 );
+
 taskListEmpty(); // call this function at the end so that it counts after all actions are taken
 // end of checklist script
 
