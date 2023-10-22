@@ -34,21 +34,25 @@ function createListElement () {
 		list.classList.remove("done");
 	}}
 	);
-	closeButton.innerHTML="✕"; // span element being added to the html here
-	list.appendChild(addCheckbox);
-	list.appendChild(listCreateNode);
-	list.appendChild(closeButton);
-	list.appendChild(closeButton);
-	todo.appendChild(list);
-	input1.value="";
+		closeButton.innerHTML="✕"; // span element being added to the html here
+		list.appendChild(addCheckbox);
+		list.appendChild(listCreateNode);
+		list.appendChild(closeButton);
+		list.appendChild(closeButton);
+		todo.appendChild(list);
+		input1.value="";
+		const listItems = document.getElementsByClassName("task");
+		listArray.push(listItems);
 	closeButton.addEventListener("click",function(){
 	list.classList.add("delete");
+	let deleted=document.querySelectorAll(".delete")[0];
+	listArray.splice(deleted,1);
 	todo.removeChild(list);
+	taskListEmpty();
 	}
 	);//event listener on the x element along with function to removechild on click event
 	
-	const listItems = document.getElementsByClassName("task");
-	listArray.push(listItems);
+
 	taskListEmpty(); // call the function once here and at the end also
 }}
 buttonClick.addEventListener("click",createListElement);
