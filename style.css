@@ -1,8 +1,8 @@
 :root{
   font-family: 'Poppins', sans-serif;
-  --bg-color: rgb(228, 215, 250);
-  --fg-color: rgb(76, 59, 106);
-  --error:rgba(102, 94, 117, 0.806);
+  --bg-color: #e4d7fa;
+  --fg-color: #4c3b6a;
+  --error:#665e75ce;
   --form-control-disabled: #959495;
   }
   body{
@@ -104,4 +104,13 @@
     grid-template-columns: .8fr 4fr .5fr;
     gap: 1rem;
     grid-auto-rows: minmax(.5rem, auto);
+  }
+  .progress-bar {
+    margin: 2rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(var(--fg-color) 75%, var(--bg-color) 0);    
   }
