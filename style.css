@@ -103,6 +103,13 @@
   grid-template-columns: .8fr 4fr .5fr;
   gap: 1rem;
   grid-auto-rows: minmax(.5rem, auto);
+  opacity: .8;
+  }
+  li:hover{
+    /* border: groove .009rem var(--error); */
+    border-radius: .3rem;
+    opacity: 1;
+    transition: opacity .02s ease-in-out;
   }
 /* progress bar controls */
 progress{
@@ -127,6 +134,7 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: #4c3b6a;
   border-radius: .3rem;
+  transition: width .7s;
 }
 .credits{
   font-size: .6rem;
