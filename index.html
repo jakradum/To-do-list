@@ -12,18 +12,19 @@
 	<h1 id="date-heading"></h1>
 	<hr>
 	<div class="intro">
-		<p id="first">Enter items below. Check them off as you finish, and track your progress.</p>
+		<p id="first">Enter items below. Check them off as you finish</p>
 	</div>
 	<input id="userinput" type="text" placeholder="Type a task. Hit Enter ↵">
 	<button id="todo-button">Add Task</button>
+	<progress id="file" value="" max="100"></progress>
 	<div class="tasks">
 		<p id="errormsg"></p>
 		<ol id="todo-list">
 		</ol>
 	</div>
-	<div class="progress-bar">
-		<progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
-	</div>
+	<p class="credits">
+		Designed & coded by <a href="https://github.com/jakradum" target="_blank">Jakradum</a> 
+	</p>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
