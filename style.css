@@ -52,7 +52,7 @@
   width: 75%;
   height: auto;
   margin-top: .3rem;
-  background-image: linear-gradient(to bottom right, var(--bg-color), white);
+  background-image: linear-gradient(to bottom right, var(--bg-color), rgba(255, 255, 255, 0));
   }
   #userinput{
   padding: .5rem 1rem .5rem 1rem;
@@ -140,5 +140,8 @@ progress::-webkit-progress-value {
   font-size: .6rem;
   margin-top: 3rem;
   color: var(--error);
+}
+a{
+  color: var(--error); /*  minor change made for review branch */
 }
 
